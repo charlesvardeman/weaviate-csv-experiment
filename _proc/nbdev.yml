@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "weaviate-csv-experiment"
+  site-url: "https://charlesvardeman.github.io/weaviate-csv-experiment"
+  description: "An experiment with Weaviate, a vector database that allows semantic search and content generation, using CSV data, CSVW schema, text2vec-transformers module and OpenAI inference API."
+  repo-branch: main
+  repo-url: "https://github.com/charlesvardeman/weaviate-csv-experiment"

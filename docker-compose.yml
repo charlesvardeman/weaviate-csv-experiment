@@ -14,7 +14,7 @@ services:
   # ...
 
   oxigraph:
-    image: oxigraph/oxigraph:latest
+    image: ghcr.io/oxigraph/oxigraph:latest
     ports:
       - "3030:3030"
     volumes:
@@ -28,5 +28,6 @@ services:
       - PERSISTENCE_DATA_PATH=/var/lib/weaviate/data
     volumes:
       - ./weaviate-data:/var/lib/weaviate/data
+
 
 # Remove 'volumes:' section, as it's not needed anymore
