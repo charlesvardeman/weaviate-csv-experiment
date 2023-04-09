@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - .:/workspace
+    ports:
+      - "8888:8888"
+
+  # Add other services like Weaviate and Weaviate database
+  # ...
+
+  oxigraph:
+    image: oxigraph/oxigraph:latest
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./oxigraph-data:/data
+
+  weaviate:
+    image: semitechnologies/weaviate:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate/data
+    volumes:
+      - ./weaviate-data:/var/lib/weaviate/data
+
+# Remove 'volumes:' section, as it's not needed anymore
