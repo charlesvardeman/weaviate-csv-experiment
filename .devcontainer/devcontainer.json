@@ -11,6 +11,7 @@
       "ms-toolsai.jupyter",
       "iterative.vscode-dvc"
     ],
-    "remoteUser": "root"
+    "remoteUser": "root",
+    "forwardPorts": [3030]
   }
   

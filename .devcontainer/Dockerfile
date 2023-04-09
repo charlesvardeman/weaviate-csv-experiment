@@ -14,6 +14,7 @@ RUN pip install --no-cache-dir \
     nbdev \
     dvc \
     rdflib \
+    oxrdflib \
     csvw \
     openai \
     weaviate-client
